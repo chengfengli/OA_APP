@@ -1,0 +1,99 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-title>我的申请</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div id="top">
+        <ion-icon name="ios-add-circle-outline" (click)="applyFun()"></ion-icon>
+        <div id="logo"></div>
+        <div id="name">李明</div>
+        <div id="leave">
+            剩余年假<span>4</span><span>8</span>小时
+        </div>
+    </div>
+    <ion-segment [(ngModel)]="apply">
+        <ion-segment-button value="applying">
+            申请中
+        </ion-segment-button>
+        <ion-segment-button value="applyed">
+            已结束
+        </ion-segment-button>
+    </ion-segment>
+    <div id="apply" [ngSwitch]="apply">
+
+        <table *ngSwitchCase="'applying'">
+            <tr>
+                <td class="runing" (click)="xiangqing()">
+                    <div class="reason">公出</div>
+                    <div class="time">2.5&nbsp;h</div>
+                </td>
+                <td class="infoBox" valign="top">
+                    <div class="date">2017-12-12 09:30-11:30&nbsp;<span class="reviewer">审核人:刘丹丹</span><a class="revoke" (click)="revoke()" href="javascript:void(0)">撤销</a></div>
+                    <div>
+                        <span>紧急联系人:自己</span>&nbsp;
+                        <span>关系:自己</span>&nbsp;
+                        <span>联系方式:12345678912</span>
+                    </div>
+                    <div>事由：撒打发士大夫</div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding: 5px 0;border:0;"></td>
+            </tr>
+            <tr>
+                <td class="runing" (click)="xiangqing()">
+                    <div class="reason">公出</div>
+                    <div class="time">2.5&nbsp;h</div>
+                </td>
+                <td class="infoBox" valign="top">
+                    <div class="date">2017-12-12 09:30-11:30&nbsp;<span class="reviewer">审核人:刘丹丹</span><a class="revoke" (click)="revoke()" href="javascript:void(0)">撤销</a></div>
+                    <div>
+                        <span>紧急联系人:自己</span>&nbsp;
+                        <span>关系:自己</span>&nbsp;
+                        <span>联系方式:12345678912</span>
+                    </div>
+                    <div>事由：撒打发士大夫</div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding: 5px 0;border:0;"></td>
+            </tr>
+            <tr>
+                <td class="runing" (click)="xiangqing()">
+                    <div class="reason">公出</div>
+                    <div class="time">2.5&nbsp;h</div>
+                </td>
+                <td class="infoBox" valign="top">
+                    <div class="date">2017-12-12 09:30-11:30&nbsp;<span class="reviewer">审核人:刘丹丹</span><a class="revoke" (click)="revoke()" href="javascript:void(0)">撤销</a></div>
+                    <div>
+                        <span>紧急联系人:自己</span>&nbsp;
+                        <span>关系:自己</span>&nbsp;
+                        <span>联系方式:12345678912</span>
+                    </div>
+                    <div>事由：撒打发士大夫</div>
+                </td>
+            </tr>
+        </table>
+
+        <table *ngSwitchCase="'applyed'">
+            <tr (click)="xiangqing()">
+                <td class="runing">
+                    <div class="reason">公出</div>
+                    <div class="time">2.5&nbsp;h</div>
+                </td>
+                <td class="infoBox" valign="top">
+                    <div class="date">2017-12-12 09:30-11:30&nbsp;<span class="reviewer">审核人:刘丹丹</span><span class="status">同意</span></div>
+                    <div>
+                        <span>紧急联系人:自己</span>&nbsp;
+                        <span>关系:自己</span>&nbsp;
+                        <span>联系方式:12345678912</span>
+                    </div>
+                    <div>事由：撒打发士大夫</div>
+                </td>
+            </tr>
+        </table>
+
+
+    </div>
+</ion-content>

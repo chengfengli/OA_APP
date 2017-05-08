@@ -1,0 +1,148 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-title>HRMS - 首页</ion-title>
+        <ion-buttons end>
+            <button ion-button><ion-icon name="ios-more"></ion-icon></button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div id="top">
+        <div id="logo">
+            <img [src]="photoUrl" (click)="setPhote()" />
+        </div>
+        <div id="name">李明</div>
+        <div id="leave">
+            剩余年假<span>4</span><span>8</span>小时
+        </div>
+    </div>
+    <ion-buttons>
+        <button small ion-button (click)="overTimeFun()">加班申请</button>
+        <button small ion-button (click)="leaveFun()">请假申请</button>
+        <button small ion-button (click)="fillCardFun()">补卡申请</button>
+        <button small ion-button (click)="weCharFun()">微信申请</button>
+    </ion-buttons>
+    <ion-card>
+        <div>
+            <ion-icon id="kaoqin" name="md-star"></ion-icon>异常考勤</div>
+        <ion-list id="kaoqin_list">
+            <ion-row>
+                <ion-col col-4>2017-02-15</ion-col>
+                <ion-col col-3>9:20</ion-col>
+                <ion-col col-3>18:10</ion-col>
+                <ion-col col-2>迟到</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4>2017-02-15</ion-col>
+                <ion-col col-3>9:20</ion-col>
+                <ion-col col-3>18:10</ion-col>
+                <ion-col col-2>迟到</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4>2017-02-15</ion-col>
+                <ion-col col-3>9:20</ion-col>
+                <ion-col col-3>18:10</ion-col>
+                <ion-col col-2>迟到</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4>2017-02-15</ion-col>
+                <ion-col col-3>9:20</ion-col>
+                <ion-col col-3>18:10</ion-col>
+                <ion-col col-2>迟到</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4>2017-02-15</ion-col>
+                <ion-col col-3>9:20</ion-col>
+                <ion-col col-3>18:10</ion-col>
+                <ion-col col-2>迟到</ion-col>
+            </ion-row>
+        </ion-list>
+    </ion-card>
+    <ion-card>
+        <div>
+            <ion-icon id="shenqing" name="md-star"></ion-icon>我的申请</div>
+        <ion-list>
+            <ion-row>
+                <ion-col col-4>2017-02-15</ion-col>
+                <ion-col col-2>公出</ion-col>
+                <ion-col col-2>2.5 h</ion-col>
+                <ion-col col-2>张三</ion-col>
+                <ion-col col-2><a (click)="revokeFun()" href="javascript:void(0)">撤销</a></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4>2017-02-15</ion-col>
+                <ion-col col-2>公出</ion-col>
+                <ion-col col-2>2.5 h</ion-col>
+                <ion-col col-2>张三</ion-col>
+                <ion-col col-2><a (click)="revokeFun()" href="javascript:void(0)">撤销</a></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4>2017-02-15</ion-col>
+                <ion-col col-2>公出</ion-col>
+                <ion-col col-2>2.5 h</ion-col>
+                <ion-col col-2>张三</ion-col>
+                <ion-col col-2><a (click)="revokeFun()" href="javascript:void(0)">撤销</a></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4>2017-02-15</ion-col>
+                <ion-col col-2>公出</ion-col>
+                <ion-col col-2>2.5 h</ion-col>
+                <ion-col col-2>张三</ion-col>
+                <ion-col col-2><a (click)="revokeFun()" href="javascript:void(0)">撤销</a></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4>2017-02-15</ion-col>
+                <ion-col col-2>公出</ion-col>
+                <ion-col col-2>2.5 h</ion-col>
+                <ion-col col-2>张三</ion-col>
+                <ion-col col-2><a (click)="revokeFun()" href="javascript:void(0)">撤销</a></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-4>2017-02-15</ion-col>
+                <ion-col col-2>公出</ion-col>
+                <ion-col col-2>2.5 h</ion-col>
+                <ion-col col-2>张三</ion-col>
+                <ion-col col-2><a (click)="revokeFun()" href="javascript:void(0)">撤销</a></ion-col>
+            </ion-row>
+        </ion-list>
+    </ion-card>
+    <ion-card>
+        <div>
+            <ion-icon id="shenhe" name="md-star"></ion-icon>待审核</div>
+        <ion-row>
+            <ion-col col-2>张三三</ion-col>
+            <ion-col col-2>公出</ion-col>
+            <ion-col col-2>2.5 h</ion-col>
+            <ion-col col-3>2017-02-15</ion-col>
+            <ion-col col-3><a (click)="agree()" href="javascript:void(0)">同意</a>&nbsp;<a (click)="refuse()" href="javascript:void(0)">拒绝</a></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-2>张三三</ion-col>
+            <ion-col col-2>公出</ion-col>
+            <ion-col col-2>2.5 h</ion-col>
+            <ion-col col-3>2017-02-15</ion-col>
+            <ion-col col-3><a (click)="agree()" href="javascript:void(0)">同意</a>&nbsp;<a (click)="refuse()" href="javascript:void(0)">拒绝</a></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-2>张三三</ion-col>
+            <ion-col col-2>公出</ion-col>
+            <ion-col col-2>2.5 h</ion-col>
+            <ion-col col-3>2017-02-15</ion-col>
+            <ion-col col-3><a (click)="agree()" href="javascript:void(0)">同意</a>&nbsp;<a (click)="refuse()" href="javascript:void(0)">拒绝</a></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-2>张三三</ion-col>
+            <ion-col col-2>公出</ion-col>
+            <ion-col col-2>2.5 h</ion-col>
+            <ion-col col-3>2017-02-15</ion-col>
+            <ion-col col-3><a (click)="agree()" href="javascript:void(0)">同意</a>&nbsp;<a (click)="refuse()" href="javascript:void(0)">拒绝</a></ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-2>张三三</ion-col>
+            <ion-col col-2>公出</ion-col>
+            <ion-col col-2>2.5 h</ion-col>
+            <ion-col col-3>2017-02-15</ion-col>
+            <ion-col col-3><a (click)="agree()" href="javascript:void(0)">同意</a>&nbsp;<a (click)="refuse()" href="javascript:void(0)">拒绝</a></ion-col>
+        </ion-row>
+    </ion-card>
+</ion-content>

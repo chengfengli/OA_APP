@@ -1,0 +1,26 @@
+/*提示狂样式*/
+
+.alert-wrapper .alert-head {
+    padding: 0;
+}
+
+.alert-md .alert-title {
+    padding: 5px 10px;
+    font-size: 16px;
+    text-align: center;
+    background: #ccc;
+}
+
+.alert-md .alert-title span:first-child {
+    float: left;
+}
+
+.alert-md .alert-title span:last-child {
+    float: right;
+    color: red;
+}
+
+.alert-sub-title table tr td {
+    font-size: 12px;
+    padding: 5px 0 5px 10px
+}

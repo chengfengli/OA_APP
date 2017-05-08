@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-title>补卡申请</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-list no-lines>
+        <div class="t">补卡时间:</div>
+        <ion-item>
+            <ion-datetime pickerFormat="YYYY MM DD HH mm " displayFormat="YYYY-MM-DD HH:mm" cancelText="取消" doneText="确认"></ion-datetime>
+        </ion-item>
+        <div class="t">审批人:</div>
+        <select>
+            <option value="0">张三</option>
+            <option value="1">李四</option>
+        </select>
+        <div class="t">补卡说明:</div>
+        <textarea class="input"></textarea>
+        <button ion-button block large>提交申请</button>
+    </ion-list>
+</ion-content>

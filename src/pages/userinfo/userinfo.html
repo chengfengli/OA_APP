@@ -1,0 +1,156 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-title>个人信息</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-segment [(ngModel)]="infomation">
+        <ion-segment-button value="kaoqin">
+            我的考勤
+        </ion-segment-button>
+        <ion-segment-button value="jiaqi">
+            我的假期
+        </ion-segment-button>
+        <ion-segment-button value="xinxi">
+            我的信息
+        </ion-segment-button>
+    </ion-segment>
+    <div style="margin-top: 45px" [ngSwitch]="infomation">
+        <ion-list id="kaoqin" *ngSwitchCase="'kaoqin'">
+            <ion-row (click)="xiangqing()" *ngFor="let data of kaoqin_data">
+                <ion-col class="kaoqin-time" col-4>{{data.date}}</ion-col>
+                <ion-col col-2>{{data.am}}</ion-col>
+                <ion-col col-3>{{data.pm}}</ion-col>
+                <ion-col col-3>{{data.status}}</ion-col>
+            </ion-row>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'jiaqi'" lines>
+            <ion-row *ngFor="let data of kaoqin_data">
+                <ion-col col-3><span class="hours">24</span>h</ion-col>
+                <ion-col class="jiaqi" col-2>——</ion-col>
+                <ion-col class="jiaqi" col-7>春节调休，需加班抵扣</ion-col>
+            </ion-row>
+        </ion-list>
+
+        <ion-list id="xinxi" *ngSwitchCase="'xinxi'">
+            <ion-card>
+                <ion-row>
+                    <ion-col col-6>姓名：郭大芬</ion-col>
+                    <ion-col col-6>工号：00009</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-6>在职状态：在职</ion-col>
+                    <ion-col col-6>电话：13699421512</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12>档案编号：467HKHJHKJH</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12>电子邮箱：564845@addf.tech</ion-col>
+                </ion-row>
+            </ion-card>
+
+            <ion-card>
+                <ion-row>
+                    <ion-col col-6>入职日期：2013-08-26</ion-col>
+                    <ion-col col-6>入职前工作时间：0</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-5>是否转正：是</ion-col>
+                    <ion-col col-7>同岗位工作经验：36</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-5>员工类型：正式员工</ion-col>
+                    <ion-col col-7>预计转正日期：2013-11-26</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-5>司龄：43</ion-col>
+                    <ion-col col-7>实际转正日期：2013-11-26</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-6>工龄：43</ion-col>
+                    <ion-col col-6></ion-col>
+                </ion-row>
+            </ion-card>
+
+            <ion-card>
+                <ion-row>
+                    <ion-col col-6>政治面貌：群众</ion-col>
+                    <ion-col col-6>民族：汉族</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-6>性别：女</ion-col>
+                    <ion-col col-6>出生年月：1989-7-2</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12>身份证号：51312219890702XXXX</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12>身份证地址：四川省雅安市名山区马岭镇天目存4组</ion-col>
+                </ion-row>
+            </ion-card>
+
+            <ion-card>
+                <ion-row>
+                    <ion-col col-6>学历：专科</ion-col>
+                    <ion-col col-6>毕业时间：2010-06-30</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-6>毕业院校：四川托普学院</ion-col>
+                    <ion-col col-6>毕业专业：计算机信息管理</ion-col>
+                </ion-row>
+            </ion-card>
+
+            <ion-card>
+                <ion-row>
+                    <ion-col col-12>居住证号：5489746798464598754687</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12>居住证地址：四川省成都市锦江区</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12>居住证到期时间：2021-10-13</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12>目前家庭住址：四川省成都市锦江区</ion-col>
+                </ion-row>
+            </ion-card>
+
+            <ion-card>
+                <ion-row>
+                    <ion-col col-6>紧急联系人：郭大权</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-6>关系：姐弟</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12>联系电话：135XXXXXXXXX</ion-col>
+                </ion-row>
+            </ion-card>
+
+            <ion-card>
+                <ion-row>
+                    <ion-col col-6>婚姻状况：已婚</ion-col>
+                    <ion-col col-6>有无子女：无</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12>银行卡号：6222222222222222222</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12>开户支行：石油路支行</ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12>兴趣爱好：手工艺
+                        <ion-icon (click)="editLove()" style="float:right;" name="ios-brush"></ion-icon>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-12>个人禁忌：135XXXXXXXXX
+                        <ion-icon (click)="editTaboo()" style="float:right;" name="ios-brush"></ion-icon>
+                    </ion-col>
+                </ion-row>
+            </ion-card>
+        </ion-list>
+    </div>
+</ion-content>

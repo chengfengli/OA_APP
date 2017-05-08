@@ -1,0 +1,40 @@
+overtime {
+    .item-md,
+    .item-ios {
+        padding: 0;
+    }
+    .item-md.item-block .item-inner {
+        padding-right: 0;
+    }
+    .label-ios,
+    .label-md {
+        margin: 0;
+    }
+    .item {
+        margin-bottom: 10px;
+    }
+    ion-datetime {
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        width: 100%;
+    }
+    select {
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 11px;
+    }
+    textarea,
+    input {
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 13px 15px;
+    }
+    textarea {
+        height: 100px;
+    }
+    .t {
+        margin-top: 10px;
+    }
+}

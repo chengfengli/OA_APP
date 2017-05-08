@@ -1,0 +1,82 @@
+home {
+    .toolbar-title {
+        text-align: center;
+    }
+    .ion-ios-more {
+        font-size: 26px;
+    }
+    a {
+        text-decoration: none;
+    }
+    #top {
+        height: 25%;
+        background-image: url('../assets/images/banager.jpg');
+        background-size: 100% 100%;
+        padding-top: 15px;
+    }
+    #logo {
+        width: 60px;
+        height: 60px;
+        background-size: 100%;
+        border-radius: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    #name,
+    #leave {
+        text-align: center;
+        color: #fff;
+    }
+    #leave span {
+        padding: 2px;
+        background: #23D3AF;
+        border-radius: 3px;
+        margin: 0 2px 0 2px;
+        color: yellow;
+        font-size: 12px;
+    }
+    ion-buttons {
+        text-align: center;
+    }
+    .button-small-md,
+    .button-md {
+        padding: 6px;
+    }
+    .button-ios,
+    .bar-buttons .button-md {
+        background: #23D3AF;
+        width: 24%;
+        margin: 10px 0 0 0;
+    }
+    #kaoqin {
+        color: red;
+    }
+    #kaoqin_list ion-col {
+        text-align: left
+    }
+    #shenqing {
+        color: #D75FFC;
+    }
+    #shenhe {
+        color: #FC9D1F;
+    }
+    ion-col {
+        font-size: 12px;
+    }
+    .row {
+        padding: 3px 10px;
+    }
+    .row .col:last-child {
+        text-align: right;
+    }
+    #xiangqing {
+        position: fixed;
+        top: 50%;
+    }
+    #xiangqing ion-card-header {
+        background: #ccc;
+    }
+    .revoke {
+        color: blue;
+    }
+}

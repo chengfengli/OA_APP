@@ -1,0 +1,111 @@
+apply-list {
+    ion-contnet {
+        background-color: #F5F3F4;
+    }
+    #top {
+        height: 25%;
+        background-image: url('../assets/images/banager.jpg');
+        background-size: 100% 100%;
+        padding-top: 15px;
+    }
+    .ion-ios-add-circle-outline {
+        color: #23D3AF;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 21px;
+        font-weight: bold;
+    }
+    #logo {
+        background-image: url('../assets/images/logo.png');
+        width: 60px;
+        height: 60px;
+        background-size: 100%;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+    #name,
+    #leave {
+        text-align: center;
+        color: #fff;
+    }
+    #leave span {
+        padding: 2px;
+        background: #23D3AF;
+        border-radius: 3px;
+        margin: 0 2px 0 2px;
+        color: yellow;
+        font-size: 12px;
+    }
+    /*选项按钮*/
+    ion-segment {
+        margin-bottom: 10px;
+        border: 1px solid #23D3AF;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .segment-md .segment-button.activated,
+    .segment-md .segment-button.segment-activated,
+    .segment-md .segment-button,
+    .segment-ios .segment-button {
+        border: 0;
+        color: #23D3AF;
+        font-size: 16px;
+        height: 38px;
+        line-height: 38px;
+    }
+    .segment-md .segment-button.activated,
+    .segment-md .segment-button.segment-activated,
+    .segment-ios .segment-button.segment-activated {
+        background: #23D3AF;
+        color: #fff;
+    }
+    /*table列表*/
+    #apply {
+        padding: 0 10px;
+    }
+    table {
+        width: 100%;
+    }
+    .runing {
+        width: 50px;
+        height: 100%;
+        background: #23D3AF;
+        text-align: center;
+        border: 1px solid #23D3AF;
+        border-top: 0;
+    }
+    .infoBox {
+        padding-left: 10px;
+        font-size: 12px;
+        border: 1px solid #ccc;
+        border-left: 0;
+    }
+    .date {
+        font-size: 12px;
+        font-weight: bold;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 3px;
+        width: 100%;
+        padding-right: 10px;
+    }
+    .revoke {
+        float: right;
+        text-decoration: none;
+    }
+    .reason {
+        color: #fff;
+        font-size: 18px;
+    }
+    .time {
+        font-size: 12px;
+        color: #fff;
+    }
+    .reviewer {
+        margin: 0 10px;
+    }
+    .status {
+        color: #23D3AF;
+        float: right;
+    }
+}
